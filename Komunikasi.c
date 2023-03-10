@@ -119,7 +119,7 @@ void rx_get(com_get_t* get){
 				get->time =  rxbuf_get[i+9];
 				get->walkpoint =  rxbuf_get[i+10];
 				HAL_UART_Transmit(huart, txbuf, 3, 1);
-				get->logic = 0x05;
+				get->logic = 0x04;
 			}
 			
 			// Check for Rotasi
