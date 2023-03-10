@@ -130,7 +130,6 @@ void rx_get(com_get_t* get){
 				get->pos_z = (rxbuf_get[i+9] << 8) | rxbuf_get[i+10];
 				get->time =  rxbuf_get[i+11];
 				get->walkpoint =  rxbuf_get[i+12];
-				get->walkpoint =  rxbuf_get[i+13];
 				uint8_t txbuf[3] = {0xA5, 0x5A, 0x05};
 				HAL_UART_Transmit(huart, txbuf, 3, 1);
 				get->logic = 0x05;
